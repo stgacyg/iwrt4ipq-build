@@ -36,8 +36,8 @@ jobs:
         SOURCE: [VIKINGYFY/immortalwrt]
         BRANCH: [owrt]
 
-    #调用公用编译核心WRT-CORE.yml
-    uses: ./.github/workflows/WRT-CORE.yml
+    #调用公用编译核心build-core.yml
+    uses: ./.github/workflows/build-core.yml
     with:
       #编译配置
       WRT_CONFIG: ${{matrix.CONFIG}}
