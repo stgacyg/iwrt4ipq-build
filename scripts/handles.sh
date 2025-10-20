@@ -64,13 +64,3 @@ if [ -f "$DM_FILE" ]; then
 
 	cd $PKG_PATH && echo "diskman has been fixed!"
 fi
-
-#移除sing-box内核回溯移植补丁
-SB_PATCH="../feeds/packages/net/sing-box/patches"
-if [ -d "$SB_PATCH" ]; then
-	echo " "
-
-	rm -rf $SB_PATCH
-
-	cd $PKG_PATH && echo "sing-box patches has been fixed!"
-fi
