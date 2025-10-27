@@ -47,7 +47,7 @@ UPDATE_PACKAGE() {
 # UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg/name，可选，pkg为从大杂烩中单独提取包名插件；name为重命名为包名"
 UPDATE_PACKAGE "argon" "chingjyu/luci-theme-argon" "main"
 
-UPDATE_PACKAGE "sing-box" "chingjyu/sb-reF1nd-pkg" "main"
+UPDATE_PACKAGE "sing-box" "chingjyu/sb-reF1nd-pkg" "main" "name"
 UPDATE_PACKAGE "homeproxy" "immortalwrt/homeproxy" "master"
 UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
 UPDATE_PACKAGE "momo" "nikkinikki-org/OpenWrt-momo" "main"
@@ -107,6 +107,7 @@ UPDATE_VERSION() {
 # Temprarily unavailable
 # UPDATE_VERSION "tailscale"
 # UPDATE_VERSION "sing-box"
+
 
 
 
