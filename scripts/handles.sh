@@ -9,7 +9,7 @@ if [ -d *"luci-theme-argon"* ]; then
 	cd ./luci-theme-argon/
 
 	sed -i "/font-weight:/ { /important/! { /\/\*/! s/:.*/: var(--font-weight);/ } }" $(find ./luci-theme-argon -type f -iname "*.css")
-	sed -i "s/primary '.*'/primary '#2babfc'/; s/dark-primary '.*'/dark-primary '#2babfc'/; s/'0.2'/'0.3'/; s/'600'/'normal'/" ./luci-app-argon-config/root/etc/config/argon
+	sed -i "s/primary '.*'/primary '#2babfc'/; s/dark_primary '.*'/dark_primary '#2babfc'/; s/'0.2'/'0.3'/; s/'600'/'normal'/" ./luci-app-argon-config/root/etc/config/argon
 
 	cd $PKG_PATH && echo "luci-theme-argon patched!"
 fi
