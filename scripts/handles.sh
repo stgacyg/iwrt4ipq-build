@@ -9,9 +9,9 @@ if [ -d *"luci-theme-argon"* ]; then
 	cd ./luci-theme-argon/
 
 	sed -i "/font-weight:/ { /important/! { /\/\*/! s/:.*/: var(--font-weight);/ } }" $(find ./luci-theme-argon -type f -iname "*.css")
-	sed -i "s/primary '.*'/primary '#43b7de'/; s/'0.2'/'0.5'/; s/'none'/'bing'/; s/'600'/'normal'/" ./luci-app-argon-config/root/etc/config/argon
+	sed -i "s/primary '.*'/primary '#2babfc'/; s/dark-primary '.*'/dark-primary '#2babfc'/; s/'0.2'/'0.3'/; s/'600'/'normal'/" ./luci-app-argon-config/root/etc/config/argon
 
-	cd $PKG_PATH && echo "theme-argon has been fixed!"
+	cd $PKG_PATH && echo "luci-theme-argon patched!"
 fi
 
 #修改qca-nss-drv启动顺序
@@ -21,7 +21,7 @@ if [ -f "$NSS_DRV" ]; then
 
 	sed -i 's/START=.*/START=85/g' $NSS_DRV
 
-	cd $PKG_PATH && echo "qca-nss-drv has been fixed!"
+	cd $PKG_PATH && echo "qca-nss-drv patched!"
 fi
 
 #修改qca-nss-pbuf启动顺序
@@ -31,17 +31,7 @@ if [ -f "$NSS_PBUF" ]; then
 
 	sed -i 's/START=.*/START=86/g' $NSS_PBUF
 
-	cd $PKG_PATH && echo "qca-nss-pbuf has been fixed!"
-fi
-
-#修复TailScale配置文件冲突
-TS_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/tailscale/Makefile")
-if [ -f "$TS_FILE" ]; then
-	echo " "
-
-	sed -i '/\/files/d' $TS_FILE
-
-	cd $PKG_PATH && echo "tailscale has been fixed!"
+	cd $PKG_PATH && echo "qca-nss-pbuf patched!"
 fi
 
 #修复Rust编译失败
