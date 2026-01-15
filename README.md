@@ -28,3 +28,10 @@
 ## 固件下载
 
 参见[仓库Release](https://github.com/cv2wx/build-immortalwrt-4ipq/releases)
+
+## 后安装脚本
+
+在完成安装之后执行：
+```
+wget -O - https://github.com/chingjyu/ImmortaWRTBuild/raw/refs/heads/main/post-install.sh | ash
+```
