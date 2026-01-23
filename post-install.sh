@@ -1,5 +1,5 @@
 # 配置软件源
-sed -i 's|downloads\.immortalwrt\.org|immortalwrt.kyarucloud.moe|g' /etc/apk/repositories.d/distfeeds.list
+sed -i 's|downloads\.immortalwrt\.org|mirror.nju.edu.cn/immortalwrt|g' /etc/apk/repositories.d/distfeeds.list
 # 添加OpenWrt-momo软件源
 wget -O - https://github.com/nikkinikki-org/OpenWrt-momo/raw/refs/heads/main/feed.sh | ash
 # 下载v2ray geodata
